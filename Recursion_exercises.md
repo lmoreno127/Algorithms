@@ -39,19 +39,19 @@
         return 1 + collatz(num);
     }
 # 5.Pascal Triangle 
-    function pascaltri(col,row){
-        if((col == 0) || (row==col))
-          return 1;
-        return pascaltri(col-1,row-1) + pascaltri(col,row-1);
+    function pascaltri(row, col) {
+      if ((row == 0) || (col == row)) return 1;
+        return pascaltri(row - 1, col - 1) + pascaltri(row, col - 1);
+      }
+      function pascal(num) {
+        let tri = '';
+        for (let col = 0; col < num; col++) {
+          for (let row = 0; row < col + 1; row++) {
+            tri += pascaltri(row, col) + " ";
+          }
+          tri += "\n";
+        }
+         return tri;
     }
     
-    function pascal(num) {
-       let tri='';
-      for(let i=0;i<num;i++){
-        for(let j=0;j<i+1;j++)
-          tri+=pascaltri(j,i) + " ";
-        tri+="\n";
-      }
-      return tri;
-    }
 
