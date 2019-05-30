@@ -29,7 +29,41 @@ function binarySearchRecursive(arr, elem, init, final) {
 
 
 ## Constructor Exercises
+## Exercise 1
+```javascript
 
+function Persona(nombre, peso, altura) {
+  this.nombre = nombre;
+  this.peso = peso;
+  this.altura = altura;
+  Persona.prototype.saludar = function(name) {
+  return `Hola ${name}, me llamo ${this.nombre}`
+  };
+ Persona.prototype.bmi = function() {
+  return this.peso/Math.pow(this.altura,2);
+ };
+ 
+}
+```
+## Exercise 2
+```javascript
+function Auto() {
+  this.velocidad = 0; 
+  Auto.prototype.acelerar = function(acc) {
+  return this.velocidad += acc;
+  };
+  Auto.prototype.frenar = function(decrease) {
+  if(this.velocidad < 0) {
+    return this.velocidad = 0;
+  }
+  return this.velocidad -= decrease;
+};
+}
+
+
+
+
+```
 
 
 
