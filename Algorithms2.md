@@ -1,6 +1,7 @@
 # Exercises
 
 # 1. Jewels-and-Stones
+```javascript
      var numJewelsInStones = function(J, S) {
      let frec={};
          for (let i = 0; i < J.length; i++) {
@@ -17,7 +18,7 @@
          }
          return sum;
     };
-
+```
     
 
 
@@ -27,7 +28,7 @@
 
 # 2.Two Sums
 
-
+```javascript
     var twoSum = function(nums, target) {
     var obje={};
     for(var i=0;i<nums.length;i++){
@@ -38,12 +39,12 @@
       obje[nums[i]]=i;
     }
     };
-
+```
 **Complejidad temporal:O**(n)
 **Complejidad espacial:O**(n)
 
 # 3.Valid Anagram
-
+```javascript
 
     var isAnagram = function(s, t) {
     if(s.length != t.length){
@@ -74,7 +75,7 @@
     }
     return true;
     };
-
+```
 **Complejidad Temporal**:**O**(n)
 **Complejidad Espacial**:**O**(n)
 
