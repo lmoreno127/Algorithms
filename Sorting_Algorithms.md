@@ -1,6 +1,6 @@
 # Sorting Algorithms
 **Selection Sort**
-
+```javascript
     function selection_Sort(arr) {
        for (let i = 0; i < (arr.length) - 1; i++) {
         let index_mini = i;
@@ -15,9 +15,9 @@
        }
        return arr;
     }
-
+```
 **Insertion Sort**
-
+```javascript
     function insertionSort(arr)  
     {  
          
@@ -34,9 +34,9 @@
         }
         return arr;  
     }  
-
+```
 **Bubble Sort**
-
+```javascript
     function bubblesort(numArray){
       for (var i=0;i<(numArray.length)-1;i++){
          var numero=numArray[i];
@@ -52,4 +52,4 @@
      }
      return numArray;
     }
-
+```
