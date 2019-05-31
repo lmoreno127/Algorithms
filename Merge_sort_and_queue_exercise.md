@@ -22,7 +22,7 @@
 ```
 **Merge Sort**
 
-```
+```javascript
     const mergeSort = (list) =>{
       if(list.length <= 1) return list;
       const middle = list.length / 2 ;
