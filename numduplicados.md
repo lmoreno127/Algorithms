@@ -1,5 +1,5 @@
 # numDuplicados with complexity O(n)
-```javascript
+```
     numDuplicados(str)
     obj {a = 2, b = 1, c =1, }
     for key in str
