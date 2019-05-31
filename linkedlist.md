@@ -6,51 +6,51 @@ function NodeList(value, ref) {
 }
 
 function LinkedList() {
-  this.head = null;
-  this.length = 0;
+  this._head = null;
+  this._length = 0;
   LinkedList.prototype.add = (value) => {
     let node = new NodeList(value, null);
-    if (!this.head) {
-      this.head = node;
+    if (!this._head) {
+      this._head = node;
     }
     else {
-      var currentlynode =this.head;  
+      var currentlynode =this._head;  
       while (currentlynode.ref)
         currentlynode = currentlynode.ref;
       currentlynode.ref = node;
       
     }
-    this.length++;
+    this._length++;
   }
   
   LinkedList.prototype.length=()=>{
-     return this.length;
+     return this._length;
   }
   LinkedList.prototype.addAt = (pos, value)=>{
-    if (pos >= this.length) {
+    if (pos >= this._length) {
       console.log("You can't add this element at pos");
     }
     else if(pos==0){
-      let node = new NodeList(value,this.head);
-      this.head=node;
-      this.length++;
+      let node = new NodeList(value,this._head);
+      this._head=node;
+      this._length++;
     }
     else {
 
-      let currentlynode = this.head;
+      let currentlynode = this._head;
       for (let i = 0; i < pos - 1; i++) {
         currentlynode = currentlynode.ref;
       }
       let node = new NodeList(value, currentlynode.ref);
       currentlynode.ref = node;
-      this.length++;
+      this._length++;
     }
   }
   LinkedList.prototype.valueAt= (pos)=>{
-   if(pos>=this.length)
+   if(pos>=this._length)
      return "There is no value at this pos";
     else{
-      let currentlynode=this.head;
+      let currentlynode=this._head;
       if(pos==0)
         return currentlynode.value;
       else{
@@ -64,21 +64,21 @@ function LinkedList() {
       
   }
   LinkedList.prototype.remove = (pos) => {
-    if (this.length > 0) {
-      if (pos< this.length) {
+    if (this._length > 0) {
+      if (pos< this._length) {
         if (pos === 0) {
-          let cab = this.head;
-          this.head = cab.ref;
-          this.length--;
+          let cab = this._head;
+          this._head = cab.ref;
+          this._length--;
         }
         else {
-          let currentlynode = this.head;
+          let currentlynode = this._head;
           for (let i = 1; i < pos; i++) {
             currentlynode = currentlynode.ref;
            }
           let deletenode = currentlynode.ref;
           currentlynode.ref = deletenode.ref;
-          this.length--;
+          this._length--;
         }
       }
       else {
