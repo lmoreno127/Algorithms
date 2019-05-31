@@ -1,6 +1,6 @@
 # Merge sort and queue exercise
 **Queue Exercise**
-
+```javascript
     function bubble(arr) {
     var total = 0;
     for (let i = 0; i < arr.length - 1; i++) {
@@ -19,10 +19,10 @@
     }
       return total;
     }
-
+```
 **Merge Sort**
 
-
+```
     const mergeSort = (list) =>{
       if(list.length <= 1) return list;
       const middle = list.length / 2 ;
@@ -48,5 +48,5 @@
         }
       return result;
     }
-    
+ ```   
 
