@@ -8,7 +8,9 @@ function NodeList(value, ref) {
 function LinkedList() {
   this._head = null;
   this._length = 0;
-  LinkedList.prototype.add = (value) => {
+
+}
+ LinkedList.prototype.add = (value) => {
     let node = new NodeList(value, null);
     if (!this._head) {
       this._head = node;
@@ -54,7 +56,7 @@ function LinkedList() {
       if(pos==0)
         return currentlynode.value;
       else{
-        for(let i=1;i<=pos:i++){
+        for(let i=1;i<=pos;i++){
           currentlynode=currentlynode.ref;
         }
         return currentlynode.value;
@@ -92,6 +94,4 @@ function LinkedList() {
     
 
   }
-
-}
 ```
