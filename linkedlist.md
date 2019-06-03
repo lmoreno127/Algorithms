@@ -8,10 +8,8 @@ function NodeList(value, ref) {
 function LinkedList() {
   this._head = null;
   this._length = 0;
-
-}
- LinkedList.prototype.add = (value) => {
-    let node = new NodeList(value, null);
+   LinkedList.prototype.add = (value) => {
+    let node = new NodeList(value);
     if (!this._head) {
       this._head = node;
     }
@@ -106,4 +104,25 @@ function LinkedList() {
     }
     return beforenode;
   }
+  LinkedList.prototype.middle=()=>{
+    let pos=0;
+    if(this._length % 2===0)
+      pos=(this._length/2)-1;
+    else{
+      pos=this._length/2;
+    }
+    let currentlynode=this._head;
+      if(pos==0)
+        return currentlynode.value;
+      else{
+        for(let i=1;i<=pos;i++){
+          currentlynode=currentlynode.ref;
+        }
+        return currentlynode.value;
+      }
+    
+  }
+
+
+}
 ```
