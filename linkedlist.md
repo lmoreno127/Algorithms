@@ -94,4 +94,16 @@ function LinkedList() {
     
 
   }
+  LinkedList.prototype.reverse=()=>{
+    let currentlynode=this._head;
+    let beforenode=null;
+    while(currentlynode){
+       let temp= currentlynode.ref;
+       currentlynode.ref=beforenode;
+       beforenode=currentlynode;
+       currentlynode = temp;
+
+    }
+    return beforenode;
+  }
 ```
